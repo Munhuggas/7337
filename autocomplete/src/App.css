@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+.H2 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.H3 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.Wrapper {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #343332;
+  padding: 0 1em;
+}
+
+.SearchBox {
+  padding: 1em;
+  width: 100%;
+  background-color: #f1f1ff;
+  border-radius: 0.25em;
+}
+
+@media (min-width: 576px) {
+  .SearchBox {
+    width: 540px;
+  }
+}
+
+.Search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.SearchField {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.SearchField-Input {
+  flex-grow: 1;
+  font-size: 1.25em;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+.SearchField-Clear {
+  position: absolute;
+  right: 1px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 1.5em;
+  cursor: pointer;
+}
+
+.SearchField-Clear::after {
+  content: '';
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-color: #61605f;
+  clip-path: polygon(13% 0%, 0% 13%, 37% 50%, 0% 87%, 13% 100%, 50% 63%, 87% 100%, 100% 87%, 63% 50%, 100% 13%, 87% 0%, 50% 37%);
+}
+
+.SearchField-Clear:hover::after {
+  background-color: #458ddf;
+}
+
+.Suggestions {
+  list-style: none;
+  max-height: 10em;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background-color: #fff;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  top: 3.5em;
+  overflow: scroll;
+  z-index: 3;
+}
+
+.Suggestions-Option {
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+}
+
+.Suggestions-Option:hover {
+  background-color: #e1efff;
+}
+
+.Suggestions-Option:focus {
+  outline: none;
+}
+
+.Suggestions-Option_Active {
+  background-color: #e1efff;
+}
+
+.History {
+  margin: 1em 1.5em 0;
+}
+
+.History-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.History-ClearButton {
+  font-size: 0.85em;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+}
+
+.HistoryRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid #d8d0d0;
+}
+
+.HistoryRow-Title {
+  flex-grow: 2;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.HistoryRow-Date {
+  color: #61605f;
+  font-size: 0.85em;
+}
+
+.HistoryRow-Delete {
+  font-size: 1em;
+  margin-left: 1em;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.HistoryRow-Delete::after {
+  content: '';
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-color: #61605f;
+  clip-path: polygon(13% 0%, 0% 13%, 37% 50%, 0% 87%, 13% 100%, 50% 63%, 87% 100%, 100% 87%, 63% 50%, 100% 13%, 87% 0%, 50% 37%);
+}
+
+.HistoryRow-Delete:hover::after {
+  background-color: #458ddf;
+}

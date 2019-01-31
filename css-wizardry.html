@@ -1,0 +1,35 @@
+<style>
+    html {
+        font-family: Arial;
+        font-size: 16px;
+    }
+
+    .btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 3px solid #808080;
+        background-image: linear-gradient(to right, #F4B05D, #F19639);
+        padding: .3125em .3125em .3125em .625em;
+        font-size: 2em;
+        font-weight: 900;
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        right: 1.40625em;
+        height: 1.1875em;
+        width: 1.1875em;
+        background-color: #000;
+        clip-path: polygon(13% 0%, 0% 13%, 37% 50%, 0% 87%, 13% 100%, 50% 63%, 87% 100%, 100% 87%, 63% 50%, 100% 13%, 87% 0%, 50% 37%);
+    }
+
+    .btn::after {
+        content: '';
+        margin-left: 0.5em;
+        border: 1.6875em solid #fff;
+        border-radius: 1.6875em;
+    }
+</style>
+<button type="button" class="btn btn--close">Delete</button>
